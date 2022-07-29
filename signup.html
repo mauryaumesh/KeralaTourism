@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=t, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>SignUp</title>
+</head>
+<body>
+    <header id="myheader">
+        <nav class="nav1">
+           <div>
+              <p>
+                 Contact : Hill Road,Nadgaon no 02,Khadavali-421605 ,
+                 India.Phone:+919503997077
+             </p>
+           </div>
+           <div>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-google"></i>
+              <i class="fa fa-twitter"></i>
+           </div>
+        </nav>
+        <nav class="nav2">
+           <div>
+              <img src="./myImages/kerala.png" alt="logo" id="logo">
+           </div>
+           <div class="menu">
+              <a href="index.html">Home</a>
+              <a href="login.html">Login</a>
+              <a href="placestovisit.html">Places to Visit</a>
+              <a href="NearbyHotels.html">Nearby Hotels</a>
+
+           </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="formWraper">
+
+            <div class="formDiv" id="signUp">
+                <h2>Create Account</h2>
+                <p class="text">SignUp with Details</p>
+                
+                <form action="login.html" onsubmit="return validateForm()" novalidate>
+                    <table class="formGroup">
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" name="myname" id="name" onblur="validate1()"></td>
+                        </tr>
+						<tr><td id="error1"></td></tr>
+                        <tr>
+                            <td> <label for="contact">Mobile Number: </label></td>
+                            <td><input id="contact" type="tel" onblur="validate2()"></td>
+                        </tr>
+                        <tr><td></td><td id="error2"></td></tr>
+					    <tr>
+                            <td><label for="mail">Email Id:</label></td>
+                            <td><input type="email" id="mail" onblur="validate3()"></td>
+                        </tr>						            
+						<tr><td id="error3"></td></tr>  
+                        <tr>
+                            <td>  <label for="uname">Set Username: </label></td>
+                            <td>  <input type="text"  id="uname" minlength="3" maxlength="10" onblur="validate4()"></td>
+                        </tr>
+                        <tr><td></td><td id="error4"></td></tr> 
+                        <tr>
+                            <td>   <label for="pass">Set Password: </label></td>
+                            <td>     <input type="password"  id="pass" onblur="validate5()"></td>
+                        </tr>
+                        <tr><td></td><td id="error5"></td></tr>
+                        <tr>
+                            <td><label for="confirmpass">Confirm Password: </label></td>
+                            <td><input type="password"  id="confirmpass" onblur="validate6()"></td>
+                        </tr>
+                        <tr><td></td><td id="error6"></td></tr>
+                        <tr>
+                            <td><input type="submit" value="REGISTER"></td>
+                            <td><input type="reset"></td>
+                        </tr>
+                </table>
+				</form>
+
+            </div>
+            <div class="welcomediv">
+                <br><br><br><br>
+                <h2>Welcome Back!</h2>
+                <p class="text">Get in touch with us for our news letter and more updates.</p>
+                <div class="loginBtn">
+                    <p class="textAboveBtn">Have an account already?</p>
+                    <a href="login.html"><button class="btn2">SIGN IN</button></a>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <script src="./JavaScript/formvalidation.js"></script>
+</body>
+</html>
